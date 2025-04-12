@@ -1,0 +1,52 @@
+<form form *ngIf="form" [formGroup]="form" class="card p-3 shadow-sm">
+  <div class="form-group mb-2">
+    <label>ID</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="id"
+      readonly="true"
+    />
+  </div>
+  <div class="form-group mb-2">
+    <label>Descripción</label>
+    <input type="text" class="form-control" formControlName="descripcion" />
+  </div>
+  <div class="form-group mb-2">
+    <label>Stock</label>
+    <input type="number" class="form-control" formControlName="stock" />
+  </div>
+  <div class="form-group mb-2">
+    <label>Precio</label>
+    <input type="number" class="form-control" formControlName="precio" />
+  </div>
+  <div class="form-group mb-2">
+    <label>Descuento (%)</label>
+    <input type="number" class="form-control" formControlName="descuento" />
+  </div>
+  <div class="form-group mb-3">
+    <label>Categoría</label>
+    <select class="form-control" formControlName="idCategoria">
+      <option *ngFor="let categoria of categorias" [value]="categoria.id">
+        {{ categoria.nombre }}
+      </option>
+    </select>
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-primary me-2"
+    (click)="habilitarFormulario()"
+    *ngIf="!modoEdicion"
+  >
+    Editar
+  </button>
+  <button
+    type="button"
+    class="btn btn-success"
+    (click)="guardarCambios()"
+    [disabled]="!modoEdicion"
+  >
+    Guardar cambios
+  </button>
+</form>

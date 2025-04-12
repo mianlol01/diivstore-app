@@ -1,0 +1,50 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bs-light);
+}
+
+.login-card {
+  border: 0;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0;
+  padding: 2rem;
+}
+
+/* Botón */
+button {
+  background-color: var(--bs-primary); /* Fondo del botón */
+  color: var(--bs-light); /* Texto blanco */
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--bs-dark); /* Fondo al pasar el mouse */
+}
+
+button:disabled {
+  background-color: #cccccc; /* Fondo gris para estado deshabilitado */
+  cursor: not-allowed;
+}
+
+/* Spinner dentro del botón */
+button .spinner-border {
+  margin-right: 8px;
+}
+.form-control {
+  border-radius: 0;
+}
+.alerta {
+  background-color: rgb(206, 75, 75); /* Gris suave */
+  color: #f8f9fa;
+  padding: 10px;
+  font-size: 16px;
+}

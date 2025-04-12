@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Asegurar que html y body ocupen toda la pantalla */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Asegurar que app-root ocupe toda la pantalla */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+:root {
+  --bs-primary: #386397 !important;
+  --bs-secondary: #e56756 !important; /* Gris marrón */
+  --bs-success: #388e3c; /* Verde cálido */
+  --bs-danger: #ff0000; /* Rojo cálido */
+  --bs-warning: #fbc02d; /* Amarillo cálido */
+  --bs-info: #0288d1; /* Azul profundo */
+  --bs-light: #f1f2fc !important; /* Gris suave */
+  --bs-dark: #2a4a72 !important; /* Marrón oscuro */
+}
+
+
